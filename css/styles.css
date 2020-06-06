@@ -1,0 +1,444 @@
+/*CSS GENERALES*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.invisible {
+    display: none;
+}
+
+/*--------------------------------------INDEX--------------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+
+body {
+    background:url(../img/LqFQB0J.jpg);   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.titulo-principal {
+    width: 70%;
+}
+
+.cajas-articulos {
+    background-image: linear-gradient(rgb(90, 13, 158, 0.8), rgb(130, 89, 165, 0.8));
+    padding: 20px;
+    border-radius: 5px;
+    border: solid;
+}
+
+.caja-principal {
+    width: 70%;
+    margin: 25px 25px 25px 15%;
+
+}
+
+hr {
+    border: 2px solid #000;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.img-logo {
+    border-radius: 10%;
+    width: 70%;
+}
+
+.logo-principal {
+    text-align: center;
+}
+
+nav {
+    background-image: linear-gradient( rgb(82, 11, 145, 0.8), rgb(130, 89, 165, 0.8));
+    border-radius: 5px;
+    border: solid;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 2%;
+}
+
+nav ul li:hover {
+    background: rgb(113, 53, 165);
+    border-right: solid;
+    border-left: solid;
+    transition: 0.4s ease-in;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin: 25px;
+    color: #000;
+    text-shadow: 2px 2px 2px #B1B1B1;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/*-------------------------CONTENIDO DE LA PAGINA INDEX----------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+
+.personajes-lista {
+    margin-left: 30px;
+}
+
+.text {
+    font-size: 20px;
+    font-family: monospace;
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    font-weight: 500;
+}
+
+.img-text {
+    float: right;
+}
+
+.img-text-2 {
+    float: left;
+}
+
+.active + .text {
+    max-height: 100%;
+    padding: 10px;
+    opacity: 1;
+}
+
+.titulos:after {
+    content: '\002b';
+    float: right;
+    margin-right: 15px;
+}
+
+.titulos.active:after {
+    content: '\02212';
+    float: right;
+}
+
+.titulos {
+    display: block;
+    margin: 2%;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-image: linear-gradient( rgb(130, 89, 165), rgb(82, 11, 145));
+    width: 95%;
+    border-radius: 5px;
+    border: solid;
+    text-shadow: 2px 1px 1px #B1B1B1;
+}
+
+.titulos:hover {
+    background-image: linear-gradient( rgb(82, 11, 145, 0.5), rgb(130, 89, 165, 0.5));
+}
+
+/*---------------------------------PAGINAS DE MANGA--------------------------------------------
+-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------*/
+.pag-cap {
+    text-align: center;
+}
+
+.caja-titulo {
+    display: flex;
+    margin-left: 35%;
+    margin-top: 55px;
+}
+
+.inicio {
+    text-decoration: none;
+    font-size: 50px;
+    color: #000;
+    text-shadow: 2px 2px 2px #B1B1B1;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient( rgb(130, 89, 165), rgb(82, 11, 145));
+    padding: 10px;
+    border: solid;
+}
+
+.inicio:hover {
+    background-image: linear-gradient( rgb(82, 11, 145, 0.5), rgb(130, 89, 165, 0.5));
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.titulo-capitulo {
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 50px;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+}
+
+.img-container-2 {
+    margin: 30px;
+    text-align: center;
+    padding: 25px;
+
+}
+
+.img-container-pages {
+    width: 50%;
+    margin-left: 22%;
+    margin-bottom: 25px;
+}
+
+select {
+    margin-bottom: 50px;
+}
+
+.cascada-boton {
+    margin-left: 50px;
+    padding: 5px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.botones {
+    padding: 8px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 15px;
+}
+
+.capitulos {
+    width: 250px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.listado {
+    width: 50px;
+    height: 30px;
+}
+
+/*--------------------MEDIA QUERY----------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 800px) {
+    
+    .caja-principal {
+        width: 100%;
+        padding: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .cajas-articulos {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li:hover {
+        border-top: solid;
+        border-bottom: solid;
+    }
+
+    hr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .titulos {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    .text {
+        font-weight: bold;
+    }
+
+    /*------------------------------PAGINAS--------------------------------------------------
+    -----------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------*/
+
+    .inicio {
+        font-size: 90px;
+    }
+
+    .titulo-capitulo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .caja-titulo {
+        margin-left: 0;
+    }
+
+    .capitulos {
+        margin-bottom: 0;
+        margin-left: 15px;
+        font-size: 25px;
+    }
+
+    .cascada-boton {
+        font-size: 25px;
+        margin-left: 50%;
+    }
+
+    .img-container-2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .img-container-pages {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .caja-botones {
+        padding: 0;
+        width: 100%;
+    }
+
+    .botones {
+        font-size: 25px;
+    }
+
+    .listado {
+        height: 50px;
+        font-size: 25px;    
+    }
+}
+
+@media (max-width: 500px) {
+
+    /*--------------------------INDEX-------------------------------------------
+    ----------------------------------------------------------------------------
+    ----------------------------------------------------------------------------*/
+
+    .caja-principal {
+        width: 100%;
+        padding: 0px;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .cajas-articulos {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li:hover {
+        border-top: solid;
+        border-bottom: solid;
+    }
+
+    hr {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .titulos {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    .text {
+        font-weight: bold;
+    }
+
+    /*------------------------------PAGINAS--------------------------------------------------
+    -----------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------*/
+
+    .inicio {
+        margin-left: 60%;
+        font-size: 90px;
+    }
+
+    .caja-titulo {
+        margin-left: 5%;
+    }
+
+    .titulo-capitulo {
+        width: 100%;
+        margin-left: 35%;
+    }
+
+    .capitulos {
+        margin-bottom: 0;
+        margin-right: 70%;
+        margin-left: 15px;
+        font-size: 25px;
+    }
+
+    .cascada-boton {
+        font-size: 25px;
+        margin-left: 10%;
+    }
+
+    .img-container-2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .img-container-pages {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .caja-botones {
+        margin-left: 35%;
+        padding: 0;
+        width: 100%;
+    }
+
+    .botones {
+        font-size: 25px;
+    }
+
+    .listado {
+        height: 50px;
+        font-size: 25px;    
+    }
+}
+
+@media (max-width: 430px) {
+    .listado {
+        margin-left: 0px;
+        margin-right: 40px;
+    }
+    
+    .caja-botones {
+        margin-left: 0;
+    }
+
+    .botones {
+        margin-left: 4px;
+    }
+}
