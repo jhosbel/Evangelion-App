@@ -62,8 +62,8 @@ makeListPages()
 
 function makeListCap (){
     Object.keys(serie).forEach((cap)=>{changeCap.innerHTML+=`<option value="${cap}">${cap}</option>`})
-}
-
+}   
+    
 makeListCap()
 
 function replaceImg(imgName) {
