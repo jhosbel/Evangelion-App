@@ -19,19 +19,50 @@ for (let i = 0; i < btnItems.length; i++){
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------- */
 const serie = {
-    'Stage.1 - Ataque del Ángel': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
-                                   '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-                                   '21', '22', '23', '24', '25', '26', '27', '28', '29', '30',
-                                   '31', '32', '33', '34', '35', '36', '37', '38', '39', '40',
-                                    '41', '42', '43', '44'],
-
-    'Stage.2 - Reencuentro': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
-                              '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-                              '21', '22', '23', '24', '25'],
-
-    'Stage.3 - Unidad 01, Avanza': ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
-                                    '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
-                                    '21', '22', '23', '24']
+    'Stage.1 - Ataque del Ángel': [ 'https://i.ibb.co/tMYxyqZ/01.jpg', 
+                                    'https://i.ibb.co/P1gXbrR/02.jpg',
+                                    'https://i.ibb.co/SwB2dVN/03.jpg',
+                                    'https://i.ibb.co/ZK8bwqN/04.jpg',
+                                    'https://i.ibb.co/C7Hbdnr/05.jpg', 
+                                    'https://i.ibb.co/K9XTLMD/06.jpg', 
+                                    'https://i.ibb.co/J5XSFCs/07.jpg', 
+                                    'https://i.ibb.co/1b8qCN4/08.jpg', 
+                                    'https://i.ibb.co/XZ2vTwh/09.jpg', 
+                                    'https://i.ibb.co/Z6qNcMg/10.jpg', 
+                                    'https://i.ibb.co/6yzXVYH/11.jpg', 
+                                    'https://i.ibb.co/f4PxTdv/12.jpg', 
+                                    'https://i.ibb.co/XtVkQgq/13.jpg', 
+                                    'https://i.ibb.co/B3gSmSG/14.jpg', 
+                                    'https://i.ibb.co/2ZvGDhV/15.jpg', 
+                                    'https://i.ibb.co/6BJxSWb/16.jpg', 
+                                    'https://i.ibb.co/Kz3WfXB/17.jpg', 
+                                    'https://i.ibb.co/kgCKHz4/18.jpg', 
+                                    'https://i.ibb.co/RYDN2fb/19.jpg', 
+                                    'https://i.ibb.co/MZJShMf/20.jpg', 
+                                    'https://i.ibb.co/jwK66Mt/21.jpg', 
+                                    'https://i.ibb.co/V9xxWZj/22.jpg', 
+                                    'https://i.ibb.co/N1851gN/23.jpg', 
+                                    'https://i.ibb.co/XbkXGmB/24.jpg', 
+                                    'https://i.ibb.co/1K7DGZ6/25.jpg', 
+                                    'https://i.ibb.co/n73VDFG/26.jpg', 
+                                    'https://i.ibb.co/48H9Mky/27.jpg', 
+                                    'https://i.ibb.co/7Y3HccY/28.jpg', 
+                                    'https://i.ibb.co/0sr3mCF/29.jpg', 
+                                    'https://i.ibb.co/FxZ831Y/30.jpg', 
+                                    'https://i.ibb.co/L9HRjmx/31.jpg', 
+                                    'https://i.ibb.co/16MMFy1/32.jpg', 
+                                    'https://i.ibb.co/99txqYj/33.jpg', 
+                                    'https://i.ibb.co/RQMsTSZ/34.jpg', 
+                                    'https://i.ibb.co/5FGVr9B/35.jpg', 
+                                    'https://i.ibb.co/CzqB8ty/36.jpg', 
+                                    'https://i.ibb.co/mSsXdns/37.jpg', 
+                                    'https://i.ibb.co/10XpKRW/38.jpg', 
+                                    'https://i.ibb.co/MCSYTsM/39.jpg', 
+                                    'https://i.ibb.co/5vFkcZF/40.jpg', 
+                                    'https://i.ibb.co/xsmpzRx/41.jpg', 
+                                    'https://i.ibb.co/bB3X6Qm/42.jpg', 
+                                    'https://i.ibb.co/dWnV9yp/43.jpg', 
+                                    'https://i.ibb.co/X8Xr8qs/44.jpg']
 }
 
 
@@ -50,12 +81,12 @@ let numPages = document.getElementById('num-pages')
 function renderRiver(){
     containerRiver.innerHTML = ''
     for(let i = 0; i < serie[capActual].length; i++){
-        containerRiver.innerHTML+=`<img src="img/Manga/${capActual}/${serie[capActual][i]}.jpg" width="800px" alt="">`
+        containerRiver.innerHTML+=`<img src="${serie[capActual][i]}" width="600px" alt="Paginas">`
     }
 }
 
 function makeListPages (){
-    serie[capActual].map((pages, ind)=>{numPages.innerHTML+=`<option value="${ind}">${pages}</option>`})
+    serie[capActual].map((pages, ind)=>{numPages.innerHTML+=`<option value="${ind}">${ind+1}</option>`})
 }
 
 makeListPages()
@@ -67,14 +98,13 @@ function makeListCap (){
 makeListCap()
 
 function replaceImg(imgName) {
-    imgContainer.innerHTML=`<img src="img/Manga/${capActual}/${imgName}.jpg" width="800px" alt="">`
+    imgContainer.innerHTML = `<img src="${imgName}" height="600px" alt="Paginas">`
 }
 
 function next() {
     if(pagActual < serie[capActual].length -1){
         pagActual++
         replaceImg(serie[capActual][pagActual])
-        console.log(pagActual)
     }
 }
 
@@ -82,7 +112,6 @@ function back() {
     if(pagActual > 0){
         pagActual--
         replaceImg(serie[capActual][pagActual])
-        console.log(pagActual)
     }
 }
 
