@@ -1,9 +1,7 @@
-/*CSS GENERALES*/
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .invisible {
@@ -15,7 +13,7 @@
 -----------------------------------------------------------------------------------------------*/
 
 body {
-    background:url(../img/LqFQB0J.jpg);   
+    background:url(https://i.ibb.co/jfKd3Yf/fondo.jpg);   
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -143,191 +141,166 @@ nav ul li a {
     border-radius: 5px;
     border: solid;
     text-shadow: 2px 1px 1px #B1B1B1;
+    color: #000;
 }
 
 .titulos:hover {
     background-image: linear-gradient( rgb(82, 11, 145, 0.5), rgb(130, 89, 165, 0.5));
 }
 
-/*---------------------------------PAGINAS DE MANGA--------------------------------------------
------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------*/
-.pag-cap {
-    text-align: center;
-}
+/*----------HEADER-----------*/
 
-.caja-titulo {
-    display: flex;
-    margin-left: 35%;
-    margin-top: 55px;
-}
-
-.inicio {
+#abrir {
     text-decoration: none;
-    font-size: 50px;
+    font-size: 300%;
     color: #000;
     text-shadow: 2px 2px 2px #B1B1B1;
     font-family: 'Times New Roman', Times, serif;
     background-image: linear-gradient( rgb(130, 89, 165), rgb(82, 11, 145));
     padding: 10px;
     border: solid;
+    border-radius: 5px;
+    transition-delay: 1s;
 }
 
-.inicio:hover {
+#abrir:hover {
     background-image: linear-gradient( rgb(82, 11, 145, 0.5), rgb(130, 89, 165, 0.5));
     padding: 10px;
     border-radius: 5px;
 }
 
-.titulo-capitulo {
-    text-align: center;
-    color: #fff;
-    margin-top: 50px;
-    font-size: 50px;
-    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
-}
-
-.img-container-2 {
-    margin: 30px;
-    text-align: center;
-    padding: 25px;
-
-}
-
-.img-container-pages {
-    width: 50%;
-    margin-left: 22%;
-    margin-bottom: 25px;
-}
-
-select {
-    margin-bottom: 50px;
-}
-
-.cascada-boton {
-    margin-left: 50px;
+#myLinks a {
+    text-decoration: none;
+    font-size: 200%;
+    margin: 25px;
+    color: #000;
     padding: 5px;
-    height: 50px;
-    font-size: 15px;
+    border-radius: 5px;
 }
 
-.botones {
-    padding: 8px;
-    margin-left: 50px;
-    margin-right: 50px;
-    font-size: 15px;
+#myLinks a:hover {
+    font-size: 250%;
+    transition: 0.5s;
+    border: solid #000;
+    color: #fff;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .capitulos {
-    width: 250px;
-    height: 50px;
-    font-size: 15px;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.banner {
+    background: rgb(130, 89, 165, 0.5);
+    text-align: center;
+    padding: 20px;
+    border-bottom: solid;
+}
+
+#myLinks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+    color: #fff;
+}
+
+.cascada {
+    cursor: pointer;
+}
+
+/*---------CONTENIDO---------*/
+
+.container {
+    background: radial-gradient(#C9C2C9, rgb(63, 17, 63));
+}
+
+.contenido {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/*---------------------------------BOTONES-----------------------------------
+---------------------------------------------------------------------------*/
+
+.caja-botones {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#B9B9B9, #fff);
+    border-top: solid;
+    padding: 15px;
+}
+
+#back, #next {
+    color: #000;
+    background: rgb(174, 171, 177);
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: solid #000;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.6s ease;
+    width: 60px;
+    height: 85px;
+    text-align: center;
+    margin-top: 14px;
+}
+
+#next:hover {
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+#back:hover {
+    background: rgb(0, 0, 0);
+    color: #fff;
+}
+
+#next-cap, #back-cap {
+    margin: 25px;
+    font-size: 150%;
+    border: solid #000;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(174, 171, 177);
+    font-weight: bold;
+    transition: 0.6s ease;
+}
+
+#next-cap:hover {
+    background: #000;
+    color: #fff;
+}
+
+#back-cap:hover {
+    background: #000;
+    color: #fff;
 }
 
 .listado {
-    width: 50px;
-    height: 30px;
+    height: 40px;
+    margin: 0 25px;
+    margin-top: 30px;
+    font-size: 20px;
 }
 
-/*--------------------MEDIA QUERY----------------------------------------------------------------
--------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------*/
 
-@media (max-width: 800px) {
-    
-    .caja-principal {
-        width: 100%;
-        padding: 0px;
-        margin: 0px 0px 0px 0px;
-    }
+/*---------------------------@MEDIA QUERY-----------------------------
+----------------------------------------------------------------------
+--------------------------------------------------------------------*/
 
-    .cajas-articulos {
-        width: 100%;
-    }
-
-    nav {
-        width: 100%;
-        margin: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul li:hover {
-        border-top: solid;
-        border-bottom: solid;
-    }
-
-    hr {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .titulos {
-        width: 100%;
-        margin: 2% 0;
-    }
-
-    .text {
-        font-weight: bold;
-    }
-
-    /*------------------------------PAGINAS--------------------------------------------------
-    -----------------------------------------------------------------------------------------
-    -----------------------------------------------------------------------------------------*/
-
-    .inicio {
-        font-size: 90px;
-    }
-
-    .titulo-capitulo {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .caja-titulo {
-        margin-left: 0;
-    }
-
-    .capitulos {
-        margin-bottom: 0;
-        margin-left: 15px;
-        font-size: 25px;
-    }
-
-    .cascada-boton {
-        font-size: 25px;
-        margin-left: 50%;
-    }
-
-    .img-container-2 {
-        margin: 0;
-        padding: 0;
-    }
-
-    .img-container-pages {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .caja-botones {
-        padding: 0;
-        width: 100%;
-    }
-
-    .botones {
-        font-size: 25px;
-    }
-
-    .listado {
-        height: 50px;
-        font-size: 25px;    
-    }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 500px){
 
     /*--------------------------INDEX-------------------------------------------
     ----------------------------------------------------------------------------
@@ -372,73 +345,108 @@ select {
         font-weight: bold;
     }
 
-    /*------------------------------PAGINAS--------------------------------------------------
-    -----------------------------------------------------------------------------------------
-    -----------------------------------------------------------------------------------------*/
-
-    .inicio {
-        margin-left: 60%;
-        font-size: 90px;
-    }
-
-    .caja-titulo {
-        margin-left: 5%;
-    }
-
-    .titulo-capitulo {
-        width: 100%;
-        margin-left: 35%;
+    /*---------------------------PAGINAS---------------------------
+    ---------------------------------------------------------------
+    -------------------------------------------------------------*/
+    
+    .titulo-cap {
+        font-size: 40px;
     }
 
     .capitulos {
-        margin-bottom: 0;
-        margin-right: 70%;
-        margin-left: 15px;
-        font-size: 25px;
+        font-size: 20px;
+        width: 450px;
     }
 
-    .cascada-boton {
-        font-size: 25px;
-        margin-left: 10%;
+    .imagen {
+        width: 99%;
+        height: auto;
     }
 
-    .img-container-2 {
+    #next-cap {
         margin: 0;
-        padding: 0;
+        padding: 5px;
+        font-size: 90%;
+        height: 42px;
+        text-align: center;
     }
 
-    .img-container-pages {
-        width: 100%;
-        margin-left: 0;
+    #back-cap {
+        margin: 0;
+        padding: 5px;
+        font-size: 90%;
+        height: 42px;
+        text-align: center;
     }
 
-    .caja-botones {
-        margin-left: 35%;
-        padding: 0;
-        width: 100%;
-    }
-
-    .botones {
+    #next {
+        margin: 0;
+        height: 42px;
         font-size: 25px;
+        margin-right: 5px;
+        padding: 0;
+    }
+
+    #back {
+        margin: 0;
+        height: 42px;
+        font-size: 25px;
+        margin-left: 5px;
+        padding: 0;
     }
 
     .listado {
-        height: 50px;
-        font-size: 25px;    
+        margin: 0 5px;
     }
 }
 
-@media (max-width: 430px) {
-    .listado {
-        margin-left: 0px;
-        margin-right: 40px;
-    }
-    
-    .caja-botones {
-        margin-left: 0;
+@media (max-width: 360px){
+
+    .titulo-cap {
+        font-size: 30px;
     }
 
-    .botones {
-        margin-left: 4px;
+    .capitulos {
+        font-size: 20px;
+        width: 300px;
+    }
+    
+    .imagen { 
+        width: 99%;
+        height: auto;
+    }
+
+    #next-cap {
+        margin: 0;
+        padding: 5px;
+        font-size: 70%;
+        height: 40px;
+        text-align: center;
+    }
+
+    #back-cap {
+        margin: 0;
+        padding: 5px;
+        font-size: 70%;
+        height: 40px;
+        text-align: center;
+    }
+
+    #next {
+        margin: 0;
+        height: 40px;
+        font-size: 25px;
+        margin-right: 5px;
+    }
+
+    #back {
+        margin: 0;
+        height: 40px;
+        font-size: 25px;
+        margin-left: 5px;
+    }
+
+    .listado {
+        margin: 0 5px;
     }
 }

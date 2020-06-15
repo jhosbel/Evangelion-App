@@ -6,28 +6,34 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Evangelion-App</title>
 </head>
-<body class="pag-cap">
-    <a class="inicio" href="index.html">Inicio</a>
-    <div class="caja-titulo">
-        <select name="capitulos" id="change-cap" class="capitulos"></select>
-        <button id="button-river" class="cascada-boton">Cascada</button>
-    </div>
-    <h2 id="title-cap" class="titulo-capitulo">Stage.1 - Ataque del Ángel</h2>
-    <div class="img-container-2">
-        <div id="img-container" class="img-container-pages">
-            <img id="img-cap-pages" class="img-pages" src="https://i.ibb.co/tMYxyqZ/01.jpg" width="600px" alt="Paginas">
+<body>
+    <div class="container">
+        <header class="banner">
+            <a href="#" id="abrir">Menú</a>
+            <div id="myLinks">
+                <a href="index.html">Inicio</a>
+                <select name="capitulos" id="change-cap" class="capitulos"></select>
+                <a id="button-cascada" class="cascada">Cascada</a>
+                <!-- <div>
+                    <iframe width="300" height="60" src="https://vocaroo.com/embed/6DYQQ9Nv4tD" frameborder="0"></iframe><br><a href="https://voca.ro/6DYQQ9Nv4tD" title="Grabadora de voz Vocaroo" target="_blank">Ver en Vocaroo</a>
+                </div> -->
+            </div>
+        </header>
+        <h2 id="cap-title" class="titulo-cap">Stage.1 - Ataque del Ángel</h2>
+        <div id="img-container" class="contenido">
+            <img id="img" class="imagen" src="https://i.ibb.co/jDw5mzH/01.jpg" style="max-height: 550px; max-width: 740px;" height="550px" alt="Paginas">
         </div>
-        <div id="container-river" class="invisible">
-            <!--LECTURA TIPO CASCADA!-->
+        <div id="container-cascada" class="invisible">
+            <!-- LECTURA TIPO CASCADA -->
         </div>
         <div class="caja-botones">
-            <button id="back" class="botones">Atras</button>
+            <a id="back-cap">Capitulo anterior</a>
+            <a id="back">&#10094;</a>
             <select name="paginas" id="num-pages" class="listado"></select>
-            <button id="next" class="botones">Siguiente</button>
-            <a href=""></a>
+            <a id="next">&#10095;</a>
+            <a id="next-cap">Capitulo siguiente</a>
         </div>
     </div>
-<!--JAVASCRIPT DEL MANGA-->
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
