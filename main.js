@@ -210,7 +210,7 @@ function eventLista(evt) {
     capActual = evt.target.value
     imgActual = 0
     galeria(carrusel[capActual][imgActual])
-    listaCap ()
+    listaPaginas ()
     titleCap.innerText = capActual
 }
 
@@ -220,8 +220,8 @@ function eventLista(evt) {
 
  function renderCascada () {
     containerCascada.innerHTML = ''
-    for(let i = 0; i < carrusel.length; i++){
-        containerCascada.innerHTML+=`<img src="${carrusel[imgActual][i]}" width="600px" alt="Paginas">`
+    for(let i = 0; i < carrusel[capActual].length; i++){
+        containerCascada.innerHTML+=`<img class="imagen" src="${carrusel[capActual][i]}" width="600px" alt="Paginas">`
     }
 }
 
@@ -230,7 +230,8 @@ function eventLista(evt) {
 ------------------------------------------------------------------------------------------------*/
 
 function listaPaginas () {
-    carrusel[capActual].map((pages, ind) => {numPages.innerHTML += `<option value="${ind}">${ind+1}</option>`})
+    numPages.innerHTML = ''
+    carrusel[capActual].map((pages, ind) => {numPages.innerHTML += `<option ${imgActual === ind ? 'selected' : ''} value="${ind}">${ind+1}</option>`})
 }
 
 listaPaginas ()
@@ -252,6 +253,7 @@ function next (){
         imgActual = 0
         galeria(carrusel[capActual][imgActual])
     }
+    listaPaginas ()
     window.scrollTo(0, 0)
 }
 
@@ -263,6 +265,7 @@ function back () {
         imgActual = 1
         galeria(carrusel[capActual][imgActual])
     }
+    listaPaginas ()
     window.scrollTo(0, 0)
 }
 
@@ -274,6 +277,7 @@ function capituloNext (){
         imgActual = 0
         galeria (carrusel[capActual][imgActual])
     }
+    listaPaginas ()
     window.scrollTo(0, 0)
 }
 
@@ -285,6 +289,7 @@ function capituloBack (){
         imgActual = 0
         galeria (carrusel[capActual][imgActual])
     }
+    listaPaginas ()
     window.scrollTo(0, 0)
 }
 
@@ -292,10 +297,12 @@ function cambiarVisivilidad() {
     if(invisible){
         containerCascada.classList.remove('invisible')
         imgContainer.classList.add('invisible')
+        renderCascada ()
+        console.log('cascada visible')
     } else {
         imgContainer.classList.remove('invisible')
         containerCascada.classList.add('invisible')
-        renderCascada()
+        console.log('cascada invisible')
     }
     invisible = !invisible
     window.scrollTo(0, 0)
